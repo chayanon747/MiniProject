@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="app">
+        <h1>Task List</h1>
+        <div class="input-icon">
+            <input type="text" class="task-input" placeholder="Write your task">
+            <input type="date" class="date-input" placeholder="Date">
+            <button class="add-button">Add</button>
+        </div>
+        
+        <div class="tasks">
+            <div class="uncompleted-tasks">
+                <div class="task-item">
+                    <span class="task-checkbox">
+                        <input type="checkbox">
+                    </span>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M18 6l-12 12"></path>
+                            <path d="M6 6l12 12"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="completed-tasks">
+                <div class="completed-title"> 
+                    <div class="task-item">
+                        <span class="task-checkbox">
+                            <input type="checkbox"> 
+                        </span>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4"></path>
+                                <path d="M18 18m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0"></path>
+                                <path d="M15 3v4"></path>
+                                <path d="M7 3v4"></path>
+                                <path d="M3 11h16"></path>
+                                <path d="M18 16.496v1.504l1 1"></path>
+                             </svg>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="40" height="40" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                <path d="M18 6l-12 12"></path>
+                                <path d="M6 6l12 12"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="task.js"></script>
+</body>
+</html>

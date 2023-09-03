@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+:root{
+    --radius: 15px;
+    --app-width: 800px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #D4D4FF;
+    background-size: cover;
+}
+
+.app{
+    color: #ffffffb0;
+    background: linear-gradient(45deg, #c4a3e0, #9ed9e6, #fad0c4);
+    background-color: #ffffff21;
+    width: var(--app-width);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: 10px 10px 20px -15px black;
+}
+
+.app h1{
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.input-icon {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* ระยะห่างระหว่างไอคอนและ input */
+    margin-bottom: 2rem;
+}
+
+.task-input{
+    width: 90%;
+    border: none;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    font-size: 20px;
+    background-color: #f4f4f425;
+    color: white;    
+}
+
+.date-input{
+    width: 50%;
+    border: none;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    font-size: 20px;
+    background-color: #f4f4f425;
+    color: #ffffff70;    
+}
+
+button{
+    
+    background: #DFB1E6;
+    color: #D7F4F3;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+}
+
+.input-icon a svg{
+    margin-left: 1px;
+    color: black;
+}
+
+.task-input::placeholder{
+    color: #ffffff70;
+}
+
+.tasks,
+.completed-tasks,
+.uncompleted-tasks{
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.task-item{
+    background-color: #f4f4f4bd;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    color: black;
+}
+
+.task-item span{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.remainingText{
+    color: #FF6962;
+}
+
+.task-item input[type=checkbox]{
+    width: 20px;
+    height: 20px;
+    accent-color: #12ffb0;
+}
+
+.task-item a svg{
+    color: #555555;
+}
+
+.task-item a svg{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    pointer-events: none;
+}
+
+.completed-tasks .task-item{
+    background-color: #1DE89DBC;
+    text-decoration: line-through;
+}
+
+.completed-title{
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
