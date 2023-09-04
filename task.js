@@ -5,9 +5,9 @@ const addButton = document.querySelector('.add-button');
 const completedTasksDiv = document.querySelector('.completed-tasks')
 const uncompletedTasksDiv = document.querySelector('.uncompleted-tasks')
 
-// Get task list on first boot
+
 window.onload = ()=>{
-    let storageTaskItems = localStorage.getItem('tastItems')
+    let storageTaskItems = localStorage.getItem('taskItems')
     if(storageTaskItems !== null){
         taskItems = JSON.parse(storageTaskItems)
     }
@@ -15,7 +15,6 @@ window.onload = ()=>{
     render()
 }
 
-// Get the content typed into the input
 addButton.addEventListener('click', () => {
     const taskText = taskInput.value.trim();
     const dateValue = dateInput.value;
@@ -64,7 +63,6 @@ function markAsCompleted(id){
         if(task.id === Number(id)){
             task.completed = true
         }
-
         return task
     })
 
@@ -121,6 +119,7 @@ function saveAndRender(){
 
 // Create task list item
 function createTaskElement(task){
+
     // Create task list container
     const taskDiv = document.createElement('div')
     taskDiv.setAttribute('data-id', task.id)
@@ -152,6 +151,7 @@ function createTaskElement(task){
         removeTask(id)
     }
 
+    // Remaining text
     const remainingTextSpan = document.createElement('span')
     remainingTextSpan.className = 'remainingText'
     remainingTextSpan.innerHTML = `Time Remaining : ${task.remainingDays}`
